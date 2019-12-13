@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="createuserstyle.css" rel="stylesheet" type="text/css">
+    <title>Create a User</title>
+</head>
+<body>
+    <div id = "info">
+        <h1>How It Works</h1>
+            <p>This is an app to help you track your blood sugar levels daily, weekly, monthly, and yearly.</p>
+            <div id = "list">
+                <ul>
+                    <li>Create a profile</li>
+                    <li>When you login your 10 most recent readings will be displayed, as well as your overall average reading.</li>
+                    <li>Enter your blood sugar level in the box and click submit.</li>
+                    <li>Your reading will be saved with the date and time.</li>
+                    <li>Repeat whenever you are required to take a reading.  Usually 1 - 7 times per day, depending on your situation.</li>
+                    <li>You will be sent reports weekly, monthly, and yearly containing your readings as well as averages.</li>
+                </ul>
+            </div>
+    </div>
+    <div id = "outer_container">
+        <div id = "inner_container">    
+                <p>Profile</p>
+                <form action = "/api/newuser" method = "post">
+                    <input id = "firstname" type = "text" name = "firstname" placeholder = "first name">
+                    <input id = "lastname" type = "text" name = "lastname" placeholder = "last name">
+                    <input id = "email" type = "text" name = "email" placeholder = "email">
+                    <input id = "pword1" type = "password" name = "password1" placeholder = "password">
+                    <input id = "pword2" type = "password" name = "password2" placeholder = "verify password">
+                    <input type = "submit" value = "Create">
+                </form>
+        </div>
+    </div>
+</body>
+</html>
